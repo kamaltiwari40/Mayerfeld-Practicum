@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderMore</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover memorable trips and small-group adventures with WanderMore Travel.">
+  <title>WanderMore Travel | Find Your Next Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">Wander<span>name goes here</span></a>
-        </nav>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a> </li>
-                 <li><a href="#">Home</a> </li>
-                  <li><a href="#about">About</a> </li>
-                   <li><a href="#contact">Contact</a> </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="home">
-            <p class="eyebrow">Trip 1 - Where are you going next</p>
-            <h1>Trip One <span> hello</span> world</h1>
-            <p class="subtext">
-                text goes here
-            </p>
-            <a href="#" class="btn"> </a>
-        </section>
-        <section id="" class="">
-            <h2> This weeks Tours</h2>
-            <div class="product">
-                <article class="product-car">
-                    <img src="Images/" alt="" class="">
-                    <h3>Trip Name</h3>
-                    <p class="category"> Trip details</p>
-                    <p class="price"> Trip price</p>
-                </article>
-            </div>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home"><span class="logo-mark">✦</span> WanderMore</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li><li><a href="#why-us">Why WanderMore</a></li><li><a href="#reviews">Reviews</a></li><li><a class="nav-cta" href="#plan">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="hero-overlay"></div><div class="hero-content container">
+      <p class="eyebrow">GO SOMEWHERE AMAZING</p><h1>The world is wide.<br><span>Your story is waiting.</span></h1>
+      <p class="hero-copy">Thoughtfully planned adventures for curious people. Find your place in the world, one unforgettable trip at a time.</p>
+      <a class="button button-primary" href="#destinations">Explore our trips <span>→</span></a>
+    </div><a class="scroll-cue" href="#destinations" aria-label="Scroll to destinations">↓</a></section>
 
-        </section>
-        <section id="about" class="about">
-            <h2>About My Travel Agency once name is decided</h2>
-            <p>
-                about details here
-            </p>
-            <p>
-                second paragraph here is required
-            </p>
-        </section>
-    </main>
-    <footer id="contact">
-        <div class="footer-grid">
-            <div class="footer-brand">Trip One <span> hello</span> world 
-            <p>text goes here</p>
-            </div>
-            <div class="footer-links">
-                <h3></h3>
-                <ul>
-                    <li><a href="#"> name</a> </li>
-                    <li><a href="#"> name</a> </li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact</h3>
-                <p>hello@name.example</p>
-                <p> address</p> 
-            </div>
-        </div>
-        <p class="copyright">&copy; 2026 </p>
+    <section class="section destinations-section" id="destinations"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow eyebrow-dark">YOUR NEXT CHAPTER</p><h2>Places that stay with you</h2></div><p class="section-intro">From slow coastal mornings to mountain-top sunrises, find a trip that feels like you.</p></div>
+      <div class="tour-grid">
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Colorful coastal villages along the Italian Riviera" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>7 days</span><span>From $1,490</span></div><h3>Italian Riviera</h3><p>Seaside villages, fresh pasta, and golden-hour strolls.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Dramatic mountain peaks beneath a blue sky" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>5 days</span><span>From $980</span></div><h3>Alpine Escape</h3><p>Fresh mountain air, scenic trails, and cozy cabins.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="Traditional Japanese street with lanterns" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>10 days</span><span>From $2,250</span></div><h3>Japan Uncovered</h3><p>Ancient temples, lively neighborhoods, and local flavors.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Elephants walking across an African landscape" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>8 days</span><span>From $2,890</span></div><h3>Wild Kenya</h3><p>Wide-open savannas and wildlife encounters with care.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Sunlit landscape stretching toward distant mountains" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>6 days</span><span>From $1,180</span></div><h3>Desert Dreaming</h3><p>Starry skies, warm dunes, and unforgettable stillness.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=85" alt="Turquoise ocean waves rolling toward a sandy shore" loading="lazy"><div class="tour-info"><div class="tour-meta"><span>7 days</span><span>From $1,350</span></div><h3>Island Slowdown</h3><p>Turquoise water, hidden coves, and room to recharge.</p><a href="#plan" class="text-link">Discover trip <span>→</span></a></div></article>
+      </div>
+    </div></section>
 
-    </footer>
+    <section class="why-section section" id="why-us"><div class="container"><div class="center-heading"><p class="eyebrow">THE WANDERMORE WAY</p><h2>More than a trip. A feeling.</h2><p>We handle the details, so you can be right where you are.</p></div>
+      <div class="features-grid"><article class="feature"><span class="feature-icon">⌖</span><h3>Thoughtfully local</h3><p>Meet the people, taste the food, and find the places guidebooks miss.</p></article><article class="feature"><span class="feature-icon">♡</span><h3>Small groups, big moments</h3><p>Travel with like-minded explorers, with space for your own discoveries.</p></article><article class="feature"><span class="feature-icon">✧</span><h3>Every detail considered</h3><p>Carefully chosen stays and smooth logistics make travel feel easy.</p></article></div>
+    </div></section>
+
+    <section class="section reviews-section" id="reviews"><div class="container"><div class="center-heading"><p class="eyebrow eyebrow-dark">KIND WORDS FROM THE ROAD</p><h2>Don't just take our word for it</h2></div>
+      <div class="reviews-grid"><figure class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Every detail felt effortless, but the trip still felt spontaneous. I came home with a camera roll full of memories and a list of new friends.”</blockquote><figcaption><span class="avatar">AM</span><span><strong>Alex M.</strong><small>Italian Riviera, 2025</small></span></figcaption></figure>
+      <figure class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“It was the perfect mix of adventure and downtime. Our local guide made the destination come alive in ways I never could have planned myself.”</blockquote><figcaption><span class="avatar">JT</span><span><strong>Jamie T.</strong><small>Japan Uncovered, 2025</small></span></figcaption></figure>
+      <figure class="review-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I usually plan every minute myself. Letting WanderMore take care of the details was the best decision—I could finally just enjoy being there.”</blockquote><figcaption><span class="avatar">SK</span><span><strong>Sam K.</strong><small>Alpine Escape, 2025</small></span></figcaption></figure></div>
+    </div></section>
+
+    <section class="plan-section" id="plan"><div class="plan-overlay"></div><div class="plan-content container"><p class="eyebrow">YOUR ADVENTURE STARTS HERE</p><h2>Somewhere out there<br>is calling your name.</h2><p>Tell us what you dream of. We'll help you find the way.</p><a class="button button-light" href="mailto:hello@wandermore.example?subject=Help%20me%20plan%20a%20trip">Let's plan your trip <span>→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="logo footer-logo" href="#home"><span class="logo-mark">✦</span> WanderMore</a><p>Go far. Feel more. Come back changed.</p><small>© 2026 WanderMore Travel. Created for a web design project.</small></div></footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    }));
+  </script>
 </body>
 </html>
