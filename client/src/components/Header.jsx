@@ -15,7 +15,7 @@ export function Header() {
     <header className="site-header">
       <a
         className="brand"
-        href="#home"
+        href="/"
         onClick={closeMenu}
         aria-label="WanderMore home"
       >
@@ -47,6 +47,8 @@ export function Header() {
         <a href="#destinations" onClick={closeMenu}>Destinations</a>
         <a href="#about" onClick={closeMenu}>Our approach</a>
         <a href="#stories" onClick={closeMenu}>Travel stories</a>
+        <a className="nav-login" href="/login" onClick={closeMenu}>Login</a>
+        <a className="nav-signup" href="/signup" onClick={closeMenu}>Sign up</a>
         <a className="nav-cta" href="#plan" onClick={closeMenu}>
           Plan your trip <span aria-hidden="true">↗</span>
         </a>
