@@ -1,6 +1,6 @@
+﻿
 
-
-const destinations = [
+export const destinations = [
   {
     name: "Italian Riviera",
     country: "ITALY",
@@ -86,14 +86,14 @@ export function Destinations() {
           description="A few places we're dreaming about right now. Which one is calling you?"
         />
 
-        <span className="section-count">01 — 06</span>
+        <span className="section-count">01 â€” 06</span>
       </div>
 
       <div className="destination-grid">
         {destinations.map((destination, index) => (
           <a
             className="destination-card"
-            href="#plan"
+            href={`/destinations/${destination.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
             key={destination.name}
             aria-label={`Plan a trip to ${destination.name}`}
           >
@@ -110,7 +110,7 @@ export function Destinations() {
               </span>
 
               <span className="destination-arrow" aria-hidden="true">
-                ↗
+                â†—
               </span>
             </div>
 
@@ -129,7 +129,7 @@ export function Destinations() {
         <p>Your kind of adventure might be somewhere else entirely.</p>
 
         <a className="text-link" href="#plan">
-          Tell us what you're dreaming of <span aria-hidden="true">→</span>
+          Tell us what you're dreaming of <span aria-hidden="true">â†’</span>
         </a>
       </div>
     </section>

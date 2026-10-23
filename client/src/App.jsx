@@ -6,12 +6,18 @@ import { Reviews } from "./components/Reviews";
 import { PlanTrip } from "./components/PlanTrip";
 import { Footer } from "./components/Footer";
 import { Login } from "./components/Login";
+import { DestinationDetails } from "./components/DestinationDetails";
 
 function App() {
   const path = window.location.pathname;
 
   if (path === "/login") {
     return <Login initialMode="sign-in" />;
+  }
+
+  const destinationMatch = path.match(/^\/destinations\/([^/]+)\/?$/);
+  if (destinationMatch) {
+    return <DestinationDetails slug={destinationMatch[1]} />;
   }
 
   if (path === "/signup") {
