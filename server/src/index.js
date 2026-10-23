@@ -21,6 +21,14 @@ app.all("/api/auth/*splat", toNodeHandler(auth));
 
 app.use(express.json());
 
+app.get("/", (_req, res) => {
+  res.json({
+    name: "WanderMore API",
+    status: "running",
+    endpoints: ["/api/health", "/api/tourists", "/api/auth/*"],
+  });
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok" });
 });
@@ -35,3 +43,4 @@ app.use((error, _req, res, _next) => {
 app.listen(port, () => {
   console.log(`WanderMore API listening on http://localhost:${port}`);
 });
+
