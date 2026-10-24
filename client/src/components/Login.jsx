@@ -57,7 +57,13 @@ export function Login({ initialMode = "sign-in" } = {}) {
           });
 
       if (result.error) {
-        setMessage(result.error.message || "Authentication failed. Please try again.");
+        console.error("Better Auth request failed:", result.error);
+        const detail =
+          result.error.message ||
+          result.error.error?.message ||
+          result.error.statusText ||
+          result.error.code;
+        setMessage(detail || `Authentication failed${result.error.status ? ` (HTTP ${result.error.status})` : ". Please try again."}`);
       } else {
         setMessage(isSignUp ? "Your account has been created." : "You are signed in.");
       }
@@ -179,4 +185,5 @@ export function Login({ initialMode = "sign-in" } = {}) {
 }
 
 export default Login;
+
 

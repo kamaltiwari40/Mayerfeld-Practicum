@@ -20,10 +20,24 @@ if (!clientURL) {
   throw new Error("CLIENT_URL is not set. Add it to server/.env.");
 }
 
+const clientOrigin = new URL(clientURL);
+const trustedOrigins = new Set([clientOrigin.origin]);
+
+// localhost and 127.0.0.1 are different browser origins; allow either for local development.
+if (clientOrigin.hostname === "localhost") {
+  const loopbackOrigin = new URL(clientOrigin);
+  loopbackOrigin.hostname = "127.0.0.1";
+  trustedOrigins.add(loopbackOrigin.origin);
+} else if (clientOrigin.hostname === "127.0.0.1") {
+  const localhostOrigin = new URL(clientOrigin);
+  localhostOrigin.hostname = "localhost";
+  trustedOrigins.add(localhostOrigin.origin);
+}
+
 export const auth = betterAuth({
   baseURL,
   secret,
-  trustedOrigins: [new URL(clientURL).origin],
+  trustedOrigins: [...trustedOrigins],
   database: drizzleAdapter(db, {
     provider: "pg",
     schema,
